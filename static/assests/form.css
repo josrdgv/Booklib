@@ -1,0 +1,54 @@
+.registration{
+    border: solid;
+    margin-left: 38%;
+    margin-right: 34%;
+    padding-top: 100px;
+    padding-left: -2px;
+    padding-right:20px;
+    padding-bottom: 59px;
+    margin-top: 7%;
+    margin-bottom: 9%;
+    border-radius: 13px;
+    box-shadow: 1px 0px 4px;
+    border-color:  rgb(36, 209, 36);
+}
+label{
+    padding-right: 74px;
+    text-align: center;
+    margin-left: 48px;
+
+}
+
+input{
+    padding-bottom: 6px;
+    margin-bottom: 32px;
+}
+#name{
+margin-left:-55px
+}
+#first{
+    margin-left:-55px
+}
+#last{
+    margin-left:-55px
+}
+
+#email{
+    margin-left:-27px
+}
+
+#pass{
+    margin-left:-53px
+}
+#password1{
+    margin-left:-53px
+
+}
+#submit{
+    background-color: rgb(36, 209, 36);
+    border-radius: 13%;
+    margin-left: 45%;
+    padding:9px;
+    border-color:  rgb(36, 209, 36);
+
+}

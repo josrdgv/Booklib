@@ -1,0 +1,31 @@
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="{% static 'assests/detail.css' %}">
+
+</head>
+<body>
+<h1>Details of Book</h1>
+<div class="card">
+<img src="{{ book.image.url }}" class="image"><br>
+<div class="content">
+<label for="" id="Name"><b>Name:</b></label>
+<td>{{ book.title }}</td>
+<label for="" id="Author"><b>Author:</b></label>
+<td>{{ book.author }}</td><br>
+<label for="" id="Quantity"><b>Quantity:</b></label>
+<td>{{ book.quantity }}</td>
+<label for="" id="price"><b>Price:</b></label>
+
+<td> {{ book.price }}</td><br>
+</div>
+</div>
+
+</body>
+</html>

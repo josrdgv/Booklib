@@ -1,0 +1,29 @@
+{% extends 'manager/index.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+<h2>Creating form</h2>
+<a href=" {%  url 'author' %}"> Create Author</a>
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+   {{ form.as_p }}
+
+    <input type="submit" value="save">
+</form>
+<br><br>
+
+<!--{% for book in books %}-->
+<!--&lt;!&ndash; This symbol is used when we use condition statement and loop statements&ndash;&gt;-->
+<!--&lt;!&ndash;here books means the key that we specified in context in views.py&ndash;&gt;-->
+<!--{{ book.title }}-->
+<!--{{ book.price }}-->
+<!--&lt;!&ndash;this double curly braces is used for specifying the output&ndash;&gt;-->
+<!--{% endfor %}-->
+<!--endfor is used to end the for loop-->
+
+
+{% endblock %}

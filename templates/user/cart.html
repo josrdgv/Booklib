@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart Details</title>
+</head>
+<body>
+
+{% if not cart_items %}
+<p>There is no product </p>
+{% else %}
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in cart_items %}
+     <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ item.book.title }}</td>
+        <td>{{ item.book.author }}</td>
+         <td>{{ item.book.price }}</td>
+        <td><a href="{% url 'remove_cart' item.id %}" class="btn btn-primary">Remove</a></td>
+         {% if item.quantity <= item.book.quantity %}
+         <td><a href="{% url 'decrease_quantity' item.id %}">-</a></td>
+         <td><input type="number" name="" id="" value="{{ item.quantity }}">Quantity</td>
+         <td><a href="{% url 'increase_quantity' item.id %}">+</a></td>
+         {% endif %}
+
+     </tr>
+  {% endfor %}
+  </tbody>
+  </table>
+{% endif %}
+
+<form action="{% url 'create_checkout_session' %}" method="post">
+     {% csrf_token %}
+    <input type="submit" value="Checkout">
+</form>
+
+
+

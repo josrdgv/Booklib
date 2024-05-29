@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Updation</title>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+<!--&lt;!&ndash;    if the method is post then we have to add the thing above the curly braces&ndash;&gt;-->
+<!--    <label>Book name</label>-->
+<!--    <input type="text" name="title" placeholder="Enter the book name" value="{{ book.title}}">-->
+<!--     <label>Book price</label>-->
+<!--    <input type="text" name="price" placeholder="Enter the book price" value="{{ book.price }}">-->
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

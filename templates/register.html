@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assests/form.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+
+
+        {% for msg in messages %}
+        {{ msg }}
+        {% endfor %}
+         {% csrf_token %}
+        <div class="registration">
+
+
+        <label for="">Username:</label>
+        <input type="text" name="username" id="name" placeholder="Enter the username" required><br>
+        <label for="">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter the password" required><br>
+        <label for="">Confirm Password:</label>
+        <input type="password" name="password1" id="password1" placeholder="Enter the password" required><br>
+
+            <input type="submit"  value="submit" onclick="ShowAlert()">
+        </div>
+    </form>
+<script src="{% static 'assests/js/script.js' %}"></script>
+</body>
+</html>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Registration form</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" href="{% static 'assests/form.css' %}">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form action="" method="post">-->
+
+
+<!--        {% for msg in messages %}-->
+<!--        {{ msg }}-->
+<!--        {% endfor %}-->
+<!--         {% csrf_token %}-->
+<!--        <div class="registration">-->
+
+
+<!--        <label for="">Username:</label>-->
+<!--        <input type="text" name="username" id="name" placeholder="Enter the username" required><br>-->
+<!--        <label for="">First Name:</label>-->
+<!--        <input type="text" name="first_name" id="first" placeholder="Enter the first_name" required><br>-->
+<!--        <label for="">Last Name:</label>-->
+<!--        <input type="text" name="last_name" id="last" placeholder="Enter the last_name" required><br>-->
+<!--        <label for="">Email:</label>-->
+<!--        <input type="email" name="email" id="email" placeholder="Enter the email" required><br>-->
+<!--        <label for="">Password:</label>-->
+<!--        <input type="password" name="password" id="pass" placeholder="Enter the password" required><br>-->
+<!--        <label for="">Confirm Password:</label>-->
+<!--        <input type="password" name="cpassword" id="cpass" placeholder="Enter the password" required><br>-->
+
+<!--            <input type="submit"  value="submit" onclick="ShowAlert()">-->
+<!--        </div>-->
+<!--    </form>-->
+<!--<script src="{% static 'assests/js/script.js' %}"></script>-->
+<!--</body>-->
+<!--</html>-->
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assests/admin.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+    <div class="logo">
+        <label> Admin Panel</label>
+    </div>
+    <div class="dashboard"> <span class="glyphicon glyphicon-home"></span>Dashboard</div>
+    <div class="side-navbar">
+        <ul>
+            
+            <li><a href="">E-commerce 
+                <select id="commerce">
+                    <option></option>
+                </select>
+            </a>
+               </li>
+            <li><a href="">Tables <select id="table">
+                <option></option>
+            </select></a>
+                </li>
+            <li><a href="">Structures <select id="Structures">
+                <option></option>
+            </select></a>
+                </li>
+            <li><a  href="">Log out</a></li>
+
+        </ul>
+    </div>
+    </div>
+
+<div class="main">
+    <Label>Dashboard</Label>
+    <div class="container">
+        <a  href="{% url 'create' %}" class="btn btn-primary">Create book</a>
+    </div>
+
+    <div class="dash-nav">
+        <form action="{% url 'search' %}" method="GET">
+        <input type="search"  placeholder="Search Book or Author" id="search" name="q">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <div class="table-data">
+         {% block content %}
+           {% endblock %}
+        </div>
+
+    </div>
+
+
+
+
+</div>
+</body>
+</html>
